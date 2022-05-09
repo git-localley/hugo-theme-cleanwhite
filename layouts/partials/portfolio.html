@@ -15,18 +15,18 @@
 
                 <!-- Chinese Version -->
                 <div class="zh post-container">
-                    {{$file :=  "/top/about-zh.md"}}
+                    {{$file :=  "/company/about-zh.md"}}
                     {{ $file | readFile | markdownify}}
                 </div>
             
                 <!-- English Version -->
                 <div class="en post-container">
-                    {{$file :=  "/top/frontpage.md"}}
+                    {{$file :=  "/company/_index.md"}}
                     {{ $file | readFile | markdownify}}
                 </div>
             {{ else }}
 
-                    {{$file :=  "/top/frontpage.md"}}
+                    {{$file :=  "/company/_index.md"}}
                     {{ $file | readFile | markdownify}}
             {{ end }}
              
