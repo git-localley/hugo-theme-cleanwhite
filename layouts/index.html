@@ -1,3 +1,32 @@
 {{ define "main" }}
-  {{ partial "portfolio.html" . }}
+<!-- Post Content -->
+<article>
+  <div class="container">
+      <div class="row">
+          <!-- Post Container -->
+          <div class="
+          col-lg-8 col-lg-offset-1
+          col-md-8 col-md-offset-1
+          col-sm-12
+          col-xs-12
+          post-container">
+          {{ if eq (.Param "multilingual") true }}
+              {{ partial "multilingual-sel.html" . }}
+              <!-- English Version -->
+              <div class="en post-container">
+                  {{$file :=  "/company/about-en.md"}}
+                  {{ $file | readFile | markdownify}}
+              </div>
+
+              <!-- Korean Version -->
+              <div class="ko post-container">
+                  {{ .Content }}
+              </div>
+          {{ else }}
+              {{ .Content }}
+          {{ end }}
+          </div>
+      </div>
+  </div>
+</article>
 {{ end }}
