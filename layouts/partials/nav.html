@@ -14,9 +14,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+            <a class="navbar-brand" href="{{ "/" | relLangURL }}">
+                {{ with .Site.Params.title_logo_image }}
+                <img src="{{ . | relURL }}" height="150%">
+                {{ else }}
+                {{ .Site.Title }}
+                {{ end }}
+            </a>
         </div>
-
+    
         <!-- Collect the nav links, forms, and other content for toggling -->
         <!-- Known Issue, found by Hux:
             <nav>'s height woule be hold on by its content.
