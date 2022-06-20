@@ -311,6 +311,10 @@ pre code{
 .navbar-custom.invert .nav li a{	
     color:#404040	
 }	
+.navbar-custom.invert .navbar-brand img {
+    -webkit-filter: invert(100%) grayscale(100%);
+    filter: invert(100%) grayscale(100%);
+}
 .navbar-custom.invert .nav li a:hover,.navbar-custom.invert .nav li a:focus{	
     color:#0085a1	
 }
@@ -347,6 +351,10 @@ pre code{
     }
     .navbar-custom.is-fixed .nav li a:hover,.navbar-custom.is-fixed .nav li a:focus{
         color:#0085a1
+    }
+    .navbar-custom.is-fixed .navbar-brand img {
+        -webkit-filter: invert(100%) grayscale(100%);
+        filter: invert(100%) grayscale(100%);
     }
     .navbar-custom.is-visible{
         -webkit-transform:translate3d(0,100%,0);
