@@ -1,0 +1,5 @@
+{{ with .Site.Params.title_logo_image }}
+<img src="{{ . | relURL }}" height="150%">
+{{ else }}
+{{ .Site.Title }}
+{{ end }}
